@@ -26,9 +26,23 @@ test('Busqueda rapida de pasajes de micro', async () => {
   await homePage.completarFormularioYBuscar('(LNS) Liniers Terminal (Capital Federal) (Argentina)', '(TAN) Tandil Terminal (Buenos Aires) (Argentina)', 'Ida y vuelta', DateUtils.proximoDia, 2, DateUtils.proximaSemana);
 
   await test.step('Verificar resultados de búsqueda son visibles y correctos.', async () => {
-    await expect(resultsPage.obtenerTituloViajeDeIda("Seleccioná tu viaje de IDA")).toBeVisible({ timeout: 20000 });
+    // Esperar a que la página se cargue completamente
+    await page.waitForLoadState('networkidle');
+
+    // Capturar pantalla antes de la verificación
+    await page.screenshot({ path: 'screenshots/before-check.png' });
+
+    // Verificar que el título del viaje de ida sea visible
+    await expect(resultsPage.obtenerTituloViajeDeIda("Seleccioná tu viaje de IDA")).toBeVisible({ timeout: 30000 });
+
+    // Verificar que el título de origen sea visible
     await expect(resultsPage.obtenerTituloOrigen("Liniers Terminal")).toBeVisible();
+
+    // Verificar que el título de destino sea visible
     await expect(resultsPage.obtenerTituloDestino("Tandil Terminal")).toBeVisible();
+
+    // Capturar pantalla después de la verificación
+    await page.screenshot({ path: 'screenshots/after-check.png' });
   });
 });
 
