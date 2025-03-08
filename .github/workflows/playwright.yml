@@ -40,3 +40,4 @@ jobs:
           name: playwright-report-api-${{ github.run_id }}
           path: playwright-report/
           retention-days: 30
+          
