@@ -26,14 +26,14 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   reporter: [['list'], ['json', { outputFile: 'playwright-report/test-results.json' }]],
-  timeout: 30000, // Tiempo máximo para cada test
+  timeout: 20000, // Tiempo máximo para cada test
   use: {
     headless: true, // Asegurarse de que los tests se ejecuten en modo headless
     slowMo: 1000,    // Add delay between actions
     userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
-    trace: 'on',
-    video: 'on',
-    screenshot: 'on',
+    trace: 'on-first-retry', // Generar trazas solo en el primer reintento
+    video: 'retain-on-failure', // Generar videos solo en caso de fallo
+    screenshot: 'only-on-failure', // Generar capturas de pantalla solo en caso de fallo
   },
   projects: [
     {
