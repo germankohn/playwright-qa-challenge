@@ -36,10 +36,10 @@ test('Busqueda rapida de pasajes de micro', async () => {
     //await expect(page.locator('div.title:has-text("Seleccioná tu viaje de IDA")')).toBeVisible();
 
     // Verificar que el título de origen sea visible
-    await expect(resultsPage.obtenerTituloOrigen("Liniers Terminal")).toBeVisible();
+    await expect(resultsPage.obtenerTituloOrigen("Liniers Terminal")).toBeInViewport();
 
     // Verificar que el título de destino sea visible
-    await expect(resultsPage.obtenerTituloDestino("Tandil Terminal")).toBeVisible();
+    await expect(resultsPage.obtenerTituloDestino("Tandil Terminal")).toBeInViewport();
 
     // Capturar pantalla después de la verificación
     await page.screenshot({ path: 'screenshots/after-check.png' });
