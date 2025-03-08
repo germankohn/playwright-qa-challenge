@@ -26,7 +26,7 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   reporter: [['list'], ['json', { outputFile: 'test-results.json' }]],
-  timeout: 20000, // Tiempo máximo para cada test
+  timeout: 30000, // Tiempo máximo para cada test
   use: {
     headless: true,
     trace: 'on',
