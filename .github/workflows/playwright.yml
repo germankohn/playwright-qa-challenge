@@ -42,3 +42,13 @@ jobs:
           name: playwright-report-api-${{ github.run_id }}
           path: playwright-report/
           retention-days: 30
+
+      - name: Check for test failures
+        if: always()
+        run: |
+          if grep -q 'FAIL' playwright-report/*.json; then
+            echo "Tests failed"
+            exit 1
+          else
+            echo "All tests passed"
+          fi
