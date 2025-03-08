@@ -76,10 +76,10 @@
               "projectName": "Google Chrome",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 10375,
+                  "duration": 11034,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -87,10 +87,10 @@
                   "steps": [
                     {
                       "title": "Verificar resultados de búsqueda son visibles y correctos.",
-                      "duration": 4012
+                      "duration": 3358
                     }
                   ],
-                  "startTime": "2025-03-08T17:14:40.596Z",
+                  "startTime": "2025-03-08T17:19:13.917Z",
                   "attachments": []
                 }
               ],
@@ -107,8 +107,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-03-08T17:14:38.916Z",
-    "duration": 12325.616000000155,
+    "startTime": "2025-03-08T17:19:12.230Z",
+    "duration": 13005.942000000003,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

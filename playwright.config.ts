@@ -29,6 +29,8 @@ export default defineConfig({
   timeout: 30000, // Tiempo máximo para cada test
   use: {
     headless: true,
+    slowMo: 1000,    // Add delay between actions
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
     trace: 'on',
     video: 'on',
   },
