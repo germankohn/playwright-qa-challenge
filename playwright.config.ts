@@ -25,7 +25,7 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
-  reporter: [['list'], ['json', { outputFile: 'test-results.json' }]],
+  reporter: [['list'], ['json', { outputFile: 'playwright-report/test-results.json' }]],
   timeout: 30000, // Tiempo máximo para cada test
   use: {
     headless: true, // Asegurarse de que los tests se ejecuten en modo headless
@@ -33,6 +33,7 @@ export default defineConfig({
     userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
     trace: 'on',
     video: 'on',
+    screenshot: 'on',
   },
   projects: [
     {
