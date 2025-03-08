@@ -27,9 +27,6 @@ test('Busqueda rapida de pasajes de micro', async () => {
 
   await test.step('Verificar resultados de búsqueda son visibles y correctos.', async () => {
    
-    // Capturar pantalla antes de la verificación
-    await page.screenshot({ path: 'screenshots/before-check.png' });
-
     // Verificar que el título del viaje de ida sea visible
     await expect(page.locator('div.title:has-text("Seleccioná tu viaje de IDA")')).toBeVisible();
 
@@ -38,9 +35,6 @@ test('Busqueda rapida de pasajes de micro', async () => {
 
     // Verificar que el título de destino sea visible
     await expect(resultsPage.obtenerTituloDestino("Tandil Terminal")).toBeVisible();
-
-    // Capturar pantalla después de la verificación
-    await page.screenshot({ path: 'screenshots/after-check.png' });
   });
 });
 

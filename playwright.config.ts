@@ -30,7 +30,6 @@ export default defineConfig({
   use: {
     headless: true, // Asegurarse de que los tests se ejecuten en modo headless
     trace: 'on-first-retry', // Generar trazas solo en el primer reintento
-    video: 'retain-on-failure', // Generar videos solo en caso de fallo
     screenshot: 'only-on-failure', // Generar capturas de pantalla solo en caso de fallo
   },
   projects: [
