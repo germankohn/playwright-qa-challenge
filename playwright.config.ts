@@ -5,7 +5,7 @@ import path from 'path';
 // Cargar variables de entorno desde el archivo .env
 dotenv.config({ path: path.resolve(__dirname, '.env') });
 
-// Determine the environment (QA or PROD)
+// Determine the environment (QA o PROD)
 const ENV = process.env.ENV?.toUpperCase();
 
 if (!ENV) {
