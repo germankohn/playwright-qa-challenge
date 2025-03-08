@@ -42,6 +42,13 @@ export default defineConfig({
         ...devices['Desktop Chrome'],
         channel: 'chrome',
         baseURL: BASE_URL,
+        headless: true,
+        slomo: 1000,
+        userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        trace: 'on-first-retry',
+        video: 'retain-on-failure',
+        screenshot: 'only-on-failure',
+        
       },
     },
   ],
