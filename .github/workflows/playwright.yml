@@ -21,7 +21,7 @@ jobs:
         env:
           ENV: QA
           QA_URL: ${{ secrets.QA_URL }}
-        run: npx playwright test ui-tests --headed --config=playwright.config.ts
+        run: npx playwright test ui-tests --config=playwright.config.ts
         continue-on-error: true
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
@@ -56,6 +56,13 @@ jobs:
         with:
           name: playwright-videos
           path: playwright-report/videos/
+
+      - name: Upload Playwright screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-screenshots
+          path: screenshots/
 
       - name: Check for test failures
         if: always()
