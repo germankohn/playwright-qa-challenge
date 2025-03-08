@@ -37,12 +37,10 @@ Desde la raiz del proyecto ejecutar el siguiente comando:
 npx playwright test api-tests
 ```
 ### Configuración de GitHub Actions
-Configuré GitHub Actions para ejecutar las pruebas automáticamente en cada push a la rama principal y en un horario específico (semanalmente los días Lunes a las 15:00hs de Argentina.). Esto asegura que las pruebas se ejecuten de manera continua y se detecten problemas lo antes posible.
+Configuré GitHub Actions para ejecutar las pruebas automáticamente en cada push a la rama principal y en un horario específico (semanalmente los días Lunes a las 15:00hs de Argentina), también el mismo se puede ejecutar a demanda desde el portal de github Actions. Esto asegura que las pruebas se ejecuten de manera continua y se detecten problemas lo antes posible.
 
 
 La URL del ambiente de purebas se encuentra protegida de exposiciones mediante la feature de Secrets de GitHub Actions.
-
-El workflow se ejecutará ante cada evento de push a la branch de ´'main', también el mismo se puede ejecutar a demanda desde el portal de github Actions.
 
 Los artefactos generados durante la ejecución de las pruebas en GitHub Actions, incluyendo trazas y capturas de pantalla, se pueden descargar desde la sección de artefactos del job correspondiente en GitHub Actions.
 
