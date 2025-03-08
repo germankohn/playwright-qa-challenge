@@ -22,7 +22,7 @@ jobs:
           ENV: QA
           QA_URL: ${{ secrets.QA_URL }}
         run: npx playwright test ui-tests
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
           name: playwright-report-ui-${{ github.run_id }}
@@ -34,7 +34,7 @@ jobs:
           ENV: QA
           QA_URL: ${{ secrets.QA_URL }}
         run: npx playwright test api-tests
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
           name: playwright-report-api-${{ github.run_id }}
