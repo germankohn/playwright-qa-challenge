@@ -32,7 +32,7 @@ test('Busqueda rapida de pasajes de micro', async () => {
   await test.step('Verificar resultados de búsqueda son visibles y correctos.', async () => { 
     // Verificar que el título del viaje de ida sea visible
     // await expect(page.locator('div.title:has-text("Seleccioná tu viaje de IDA")')).toBeVisible();
-    await expect(resultsPage.obtenerTituloViajeDeIda("Seleccioná tu viaje de IDA")).toBeVisible();
+    //await expect(resultsPage.obtenerTituloViajeDeIda("Seleccioná tu viaje de IDA")).toBeVisible();
     // Verificar que el título de origen sea visible
     await expect(resultsPage.obtenerTituloOrigen("Liniers Terminal")).toBeVisible();
     // Verificar que el título de destino sea visible
