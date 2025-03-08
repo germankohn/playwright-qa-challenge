@@ -1,8 +1,11 @@
+# Ignorar node_modules
 node_modules/
-test-results/
+
+# Ignorar archivos de entorno
 .env
 
-# Playwright
-/playwright-report/
+# Ignorar directorios de artefactos
+playwright-report/
+screenshots/
 /blob-report/
 /playwright/.cache/
