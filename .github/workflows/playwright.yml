@@ -21,7 +21,7 @@ jobs:
         env:
           ENV: QA
           QA_URL: ${{ secrets.QA_URL }}
-        run: npx playwright test ui-tests
+        run: npx playwright test ui-tests --config=playwright.config.ts
         continue-on-error: true
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
@@ -34,7 +34,7 @@ jobs:
         env:
           ENV: QA
           QA_URL: ${{ secrets.QA_URL }}
-        run: npx playwright test api-tests
+        run: npx playwright test api-tests --config=playwright.config.ts
         continue-on-error: true
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
