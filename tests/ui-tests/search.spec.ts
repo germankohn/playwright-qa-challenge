@@ -14,6 +14,7 @@ test.beforeEach(async ({ browser, baseURL }: { browser: Browser, baseURL?: strin
   homePage = new HomePage(page);
   resultsPage = new ResultsPage(page);
   await test.step('Abrir la pagina de inicio', async () => {
+    // Abrir la página de inicio
     await homePage.openHomePage(baseURL!);
   });
 });
@@ -23,8 +24,8 @@ test.afterEach(async () => {
 });
 
 test('Busqueda rapida de pasajes de micro', async () => {
-  
   await test.step('Completar formulario y realizar la búsqueda',async() => {
+    // Completar formulario de búsqueda
     await homePage.completarFormularioYBuscar('(LNS) Liniers Terminal (Capital Federal) (Argentina)', '(TAN) Tandil Terminal (Buenos Aires) (Argentina)', 'Ida y vuelta', DateUtils.proximoDia, 2, DateUtils.proximaSemana);
   });
 
@@ -39,19 +40,29 @@ test('Busqueda rapida de pasajes de micro', async () => {
 });
 
 test('Busqueda sin resultados', async () => {
-  await homePage.completarFormularioYBuscar('(LNS) Liniers Terminal (Capital Federal) (Argentina)', '(TAN) Tandil Terminal (Buenos Aires) (Argentina)', 'Solo ida', DateUtils.proximoAnio, 2);
-
-  await test.step('Verificar resultados de búsqueda son visibles y correctos.', async () => {
+  await test.step('Completar formulario y realizar la búsqueda para el proximo año',async() => {
+    // Completar formulario de búsqueda
+    await homePage.completarFormularioYBuscar('(LNS) Liniers Terminal (Capital Federal) (Argentina)', '(TAN) Tandil Terminal (Buenos Aires) (Argentina)', 'Solo ida', DateUtils.proximoAnio, 2);
+  });
+  
+  await test.step('Verificar mensaje de búsqueda sin resultados.', async () => {
+    //Verificar mensaje de no resultados
     await expect(resultsPage.obtenerTextoDeNoResultados("No encontramos opciones para tu viaje")).toBeVisible();
   });
 });
 
 test('Busqueda con parametros erroneos o faltantes', async () => {
-  await homePage.realizarBusqueda();
-
+  await test.step('Completar formulario y realizar la búsqueda para el proximo año',async() => {
+    // Realizar busqueda sin completar formulario
+    await homePage.realizarBusqueda();
+  });
+  
   await test.step('Verificar advertencias de parámetros de búsquedas incompletos.', async () => {
+    //Verificar advertencia de Origen incompleto
     await expect(resultsPage.advertenciaOrigenIncompleto("Completá el Origen de tu viaje")).toBeVisible();
+    //Verificar advertencia de Destino incompleto
     await expect(resultsPage.advertenciaDestinoIncompleto("Completá el Destino de tu viaje")).toBeVisible();
+    //Verificar advertencia de Fecha de Ida incompleta
     await expect(resultsPage.advertenciaFechaDeIdaIncompleta("Completá la fecha")).toBeVisible();
   });
 });
