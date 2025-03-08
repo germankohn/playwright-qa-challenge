@@ -1,4 +1,3 @@
-```markdown
 # Playwright QA Challenge
 
 ## Clonar el Repositorio y Configuración inicial del Proyecto
