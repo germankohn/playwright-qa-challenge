@@ -1,0 +1,76 @@
+{
+  "message": "ok",
+  "total_records": 60,
+  "total_pages": 6,
+  "previous": null,
+  "next": "https://swapi.tech/api/planets?page=2&limit=10",
+  "results": [
+    {
+      "uid": "1",
+      "name": "Tatooine",
+      "url": "https://www.swapi.tech/api/planets/1"
+    },
+    {
+      "uid": "2",
+      "name": "Alderaan",
+      "url": "https://www.swapi.tech/api/planets/2"
+    },
+    {
+      "uid": "3",
+      "name": "Yavin IV",
+      "url": "https://www.swapi.tech/api/planets/3"
+    },
+    {
+      "uid": "4",
+      "name": "Hoth",
+      "url": "https://www.swapi.tech/api/planets/4"
+    },
+    {
+      "uid": "5",
+      "name": "Dagobah",
+      "url": "https://www.swapi.tech/api/planets/5"
+    },
+    {
+      "uid": "6",
+      "name": "Bespin",
+      "url": "https://www.swapi.tech/api/planets/6"
+    },
+    {
+      "uid": "7",
+      "name": "Endor",
+      "url": "https://www.swapi.tech/api/planets/7"
+    },
+    {
+      "uid": "8",
+      "name": "Naboo",
+      "url": "https://www.swapi.tech/api/planets/8"
+    },
+    {
+      "uid": "9",
+      "name": "Coruscant",
+      "url": "https://www.swapi.tech/api/planets/9"
+    },
+    {
+      "uid": "10",
+      "name": "Kamino",
+      "url": "https://www.swapi.tech/api/planets/10"
+    }
+  ],
+  "apiVersion": "1.0",
+  "timestamp": "2025-03-08T14:32:57.076Z",
+  "support": {
+    "contact": "admin@swapi.tech",
+    "donate": "https://www.paypal.com/donate/?business=2HGAUVTWGR5T2&no_recurring=0&item_name=Support+Swapi+and+keep+the+galaxy%27s+data+free%21+Your+donation+fuels+open-source+innovation+and+helps+us+grow.+Thank+you%21+%F0%9F%9A%80&currency_code=USD",
+    "partnerDiscounts": {
+      "saberMasters": {
+        "link": "https://www.swapi.tech/partner-discount/sabermasters-swapi",
+        "details": "Use this link to automatically get $10 off your purchase!"
+      }
+    }
+  },
+  "social": {
+    "discord": "https://discord.gg/zWvA6GPeNG",
+    "reddit": "https://www.reddit.com/r/SwapiOfficial/",
+    "github": "https://github.com/semperry/swapi/blob/main/CONTRIBUTORS.md"
+  }
+}

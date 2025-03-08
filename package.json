@@ -13,5 +13,8 @@
     "@types/node": "^22.13.9",
     "ajv": "^8.17.1",
     "playwright": "^1.51.0"
+  },
+  "dependencies": {
+    "ajv-formats": "^3.0.1"
   }
 }

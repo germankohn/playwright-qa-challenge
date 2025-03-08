@@ -16,6 +16,9 @@ jobs:
         run: npm install
 
       - name: Run UI tests
+        env:
+          ENV: QA
+          QA_URL: ${{ secrets.QA_URL }}
         run: npx playwright test ui-tests
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
@@ -25,6 +28,8 @@ jobs:
           retention-days: 30
 
       - name: Run API tests
+        env:
+          ENV: QA
         run: npx playwright test api-tests
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
