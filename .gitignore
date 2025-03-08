@@ -6,6 +6,7 @@ node_modules/
 
 # Ignorar directorios de artefactos
 playwright-report/
+test-results.json
 test-results/
 screenshots/
 /blob-report/
