@@ -23,16 +23,16 @@ test.afterEach(async () => {
 });
 
 test('Busqueda rapida de pasajes de micro', async () => {
-  await homePage.completarFormularioYBuscar('(LNS) Liniers Terminal (Capital Federal) (Argentina)', '(TAN) Tandil Terminal (Buenos Aires) (Argentina)', 'Ida y vuelta', DateUtils.proximoDia, 2, DateUtils.proximaSemana);
+  
+  await test.step('Completar formulario y realizar la búsqueda',async() => {
+    await homePage.completarFormularioYBuscar('(LNS) Liniers Terminal (Capital Federal) (Argentina)', '(TAN) Tandil Terminal (Buenos Aires) (Argentina)', 'Ida y vuelta', DateUtils.proximoDia, 2, DateUtils.proximaSemana);
+  });
 
-  await test.step('Verificar resultados de búsqueda son visibles y correctos.', async () => {
-   
+  await test.step('Verificar resultados de búsqueda son visibles y correctos.', async () => { 
     // Verificar que el título del viaje de ida sea visible
     await expect(page.locator('div.title:has-text("Seleccioná tu viaje de IDA")')).toBeVisible();
-
     // Verificar que el título de origen sea visible
     await expect(resultsPage.obtenerTituloOrigen("Liniers Terminal")).toBeVisible();
-
     // Verificar que el título de destino sea visible
     await expect(resultsPage.obtenerTituloDestino("Tandil Terminal")).toBeVisible();
   });

@@ -12,7 +12,7 @@ if (!ENV) {
   throw new Error('ENV variable is missing in .env file. Set ENV=QA or ENV=PROD.');
 }
 
-// Map environment to the correct URLs
+// Mapeo de URLS con ambientes
 const BASE_URL = ENV === 'QA' ? process.env.QA_URL : ENV === 'PROD' ? process.env.PROD_URL : undefined;
 
 if (!BASE_URL) {
