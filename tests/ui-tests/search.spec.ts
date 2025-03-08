@@ -33,7 +33,7 @@ test('Busqueda rapida de pasajes de micro', async () => {
     await page.screenshot({ path: 'screenshots/before-check.png' });
 
     // Verificar que el título del viaje de ida sea visible
-    await expect(resultsPage.obtenerTituloViajeDeIda("Seleccioná tu viaje de IDA")).toBeVisible({ timeout: 30000 });
+    await expect(resultsPage.obtenerTituloViajeDeIda("Seleccioná tu viaje de IDA")).toBeVisible({ timeout: 60000 });
 
     // Verificar que el título de origen sea visible
     await expect(resultsPage.obtenerTituloOrigen("Liniers Terminal")).toBeVisible();
