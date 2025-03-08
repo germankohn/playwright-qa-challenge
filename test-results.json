@@ -1,0 +1,642 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\germa\\OneDrive\\Escritorio\\playwright-qa-challenge\\playwright.config.ts",
+    "rootDir": "C:/Users/germa/OneDrive/Escritorio/playwright-qa-challenge/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/germa/OneDrive/Escritorio/playwright-qa-challenge/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Google Chrome",
+        "name": "Google Chrome",
+        "testDir": "C:/Users/germa/OneDrive/Escritorio/playwright-qa-challenge/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "3way",
+    "version": "1.51.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "api-tests\\films.spec.ts",
+      "file": "api-tests/films.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Films API Tests",
+          "file": "api-tests/films.spec.ts",
+          "line": 11,
+          "column": 6,
+          "specs": [
+            {
+              "title": "GET /films - Happy Path",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Google Chrome",
+                  "projectName": "Google Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1047,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-08T16:53:53.522Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "608030641b7987d938ed-71cfb32fec815488f659",
+              "file": "api-tests/films.spec.ts",
+              "line": 13,
+              "column": 9
+            },
+            {
+              "title": "GET /films - Validar JSON schema",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Google Chrome",
+                  "projectName": "Google Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 566,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-08T16:53:54.587Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "608030641b7987d938ed-eaa981000d0b3c410d85",
+              "file": "api-tests/films.spec.ts",
+              "line": 28,
+              "column": 9
+            },
+            {
+              "title": "GET /films/0 - No encontrado (404)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Google Chrome",
+                  "projectName": "Google Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 294,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-08T16:53:55.159Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "608030641b7987d938ed-4ccbdbfe6ab2b005987e",
+              "file": "api-tests/films.spec.ts",
+              "line": 39,
+              "column": 9
+            },
+            {
+              "title": "POST /films - Servicio no disponible (503) contenido invalido",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Google Chrome",
+                  "projectName": "Google Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 196,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-08T16:53:55.460Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "608030641b7987d938ed-7c44ea0fecfc8b4ba485",
+              "file": "api-tests/films.spec.ts",
+              "line": 44,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "api-tests\\people.spec.ts",
+      "file": "api-tests/people.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "People API Tests",
+          "file": "api-tests/people.spec.ts",
+          "line": 11,
+          "column": 6,
+          "specs": [
+            {
+              "title": "GET /people - Happy Path",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Google Chrome",
+                  "projectName": "Google Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 568,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-08T16:53:55.671Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b14f2dccc9bb73fd6f13-a2f2ec1646c83baaf389",
+              "file": "api-tests/people.spec.ts",
+              "line": 13,
+              "column": 9
+            },
+            {
+              "title": "GET /people - Validar JSON schema",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Google Chrome",
+                  "projectName": "Google Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 346,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-08T16:53:56.245Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b14f2dccc9bb73fd6f13-c7b2e409e3b96bdfc303",
+              "file": "api-tests/people.spec.ts",
+              "line": 28,
+              "column": 9
+            },
+            {
+              "title": "GET /people/0 - No encontrado (404)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Google Chrome",
+                  "projectName": "Google Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 264,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-08T16:53:56.595Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b14f2dccc9bb73fd6f13-efd5527dd993399ea89e",
+              "file": "api-tests/people.spec.ts",
+              "line": 39,
+              "column": 9
+            },
+            {
+              "title": "POST /people - Servicio no disponible (503) contenido invalidoe",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Google Chrome",
+                  "projectName": "Google Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 198,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-08T16:53:56.864Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b14f2dccc9bb73fd6f13-2d47d1f6d9f4e1218f98",
+              "file": "api-tests/people.spec.ts",
+              "line": 44,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "api-tests\\planets.spec.ts",
+      "file": "api-tests/planets.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Planets API Tests",
+          "file": "api-tests/planets.spec.ts",
+          "line": 11,
+          "column": 6,
+          "specs": [
+            {
+              "title": "GET /planets - Happy Path",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Google Chrome",
+                  "projectName": "Google Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 566,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-08T16:53:57.076Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a64853937cb86acfb33d-0832c0fe3639c9492f1e",
+              "file": "api-tests/planets.spec.ts",
+              "line": 13,
+              "column": 9
+            },
+            {
+              "title": "GET /people - Validar JSON schema",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Google Chrome",
+                  "projectName": "Google Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 352,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-08T16:53:57.651Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a64853937cb86acfb33d-6a8ebddcf1c32e27a8d4",
+              "file": "api-tests/planets.spec.ts",
+              "line": 28,
+              "column": 9
+            },
+            {
+              "title": "GET /planets/0 - No encontrado (404)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Google Chrome",
+                  "projectName": "Google Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 861,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-08T16:53:58.007Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a64853937cb86acfb33d-c63d41a95336cbda47b5",
+              "file": "api-tests/planets.spec.ts",
+              "line": 39,
+              "column": 9
+            },
+            {
+              "title": "POST /planets - Servicio no disponible (503) contenido invalido",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Google Chrome",
+                  "projectName": "Google Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 210,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-03-08T16:53:58.876Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a64853937cb86acfb33d-725a4757fbb9d83ba157",
+              "file": "api-tests/planets.spec.ts",
+              "line": 44,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "ui-tests\\search.spec.ts",
+      "file": "ui-tests/search.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Busqueda rapida de pasajes de micro",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Google Chrome",
+              "projectName": "Google Chrome",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9993,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Verificar resultados de búsqueda son visibles y correctos.",
+                      "duration": 3315
+                    }
+                  ],
+                  "startTime": "2025-03-08T16:53:59.106Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b0643500ec782bf63f86-47451925b81c84e7b318",
+          "file": "ui-tests/search.spec.ts",
+          "line": 25,
+          "column": 5
+        },
+        {
+          "title": "Busqueda sin resultados",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Google Chrome",
+              "projectName": "Google Chrome",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7649,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Verificar resultados de búsqueda son visibles y correctos.",
+                      "duration": 983
+                    }
+                  ],
+                  "startTime": "2025-03-08T16:54:09.345Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b0643500ec782bf63f86-bcf1ce00ea112bf003dd",
+          "file": "ui-tests/search.spec.ts",
+          "line": 49,
+          "column": 5
+        },
+        {
+          "title": "Busqueda con parametros erroneos o faltantes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Google Chrome",
+              "projectName": "Google Chrome",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4076,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Verificar advertencias de parámetros de búsquedas incompletos.",
+                      "duration": 26
+                    }
+                  ],
+                  "startTime": "2025-03-08T16:54:17.001Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b0643500ec782bf63f86-b61c407417a10f40841f",
+          "file": "ui-tests/search.spec.ts",
+          "line": 57,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-03-08T16:53:51.556Z",
+    "duration": 29556.909000000007,
+    "expected": 15,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
