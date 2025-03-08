@@ -3,7 +3,7 @@
 
 ## Clonar el Repositorio y Configuración inicial del Proyecto
 Clonar repositorio y desde una terminal pararse sobre la raiz del proyecto y ejecutar el siguiente comando:
-```bash
+```
 npm install
 ```
 Esperar a que se descarguen todas las dependencias.
