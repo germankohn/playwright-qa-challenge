@@ -1,4 +1,5 @@
 # Playwright QA Challenge
+Este README proporciona instrucciones claras sobre cómo ejecutar las pruebas, detalles sobre la implementación, respuestas a las preguntas adicionales, y una explicación de las decisiones técnicas tomadas. Además, incluye un ejemplo de cómo escribir los datos de las pruebas de API en un archivo `.json`.
 
 ## Clonar el Repositorio y Configuración inicial del Proyecto
 Clonar repositorio y desde una terminal pararse sobre la raiz del proyecto y ejecutar el siguiente comando:
@@ -47,22 +48,6 @@ Los artefactos generados durante la ejecución de las pruebas en GitHub Actions,
 ### Ver Reportes
 Configuré Playwright para generar reportes HTML detallados, así como capturas de pantalla en caso de fallos. Esto facilita la depuración y el análisis de los resultados de las pruebas.
 Los reportes HTML generados por Playwright se pueden encontrar en el directorio playgwright-report/html. Para visualizar el mismo, abre el archivo `index.html` en tu navegador.
-
-
-## Preguntas Extra
-
-### Imagina que ya estamos trabajando juntos y que la suite de pruebas creciera a 500 tests, ¿qué cambios harías o sugerirías en la estructura?
-
-No soy partidario de llegar a ese contexto de tener tantas pruebas automatizadas, (no sin antes haber tomado todas las medidas preventivas para evitarlo), puesto que pienso que la automatización es una ventaja que nos ayuda a reducir costos,tiempos y probabilidad de errores humanos, no hay que abusar de ella y tener un criterio bien definido de que tiene sentido y prioridad ser destinado a una automatización. Pero si ya ingreso a un proyecto con esa realidad, lo primero que haría es lo siguiente:
-1. **Estrategias de Ejecución**: Implementar una estrategia de ejecución de pruebas basada en prioridades, ejecutando primero las pruebas críticas y luego las menos críticas.
-2.  **Paralelización de Pruebas**: Aumentar el número de workers para ejecutar las pruebas en paralelo y reducir el tiempo total de ejecución.
-3. **Optimización de Recursos**: Utilizar servicios de CI/CD que permitan la ejecución distribuida de pruebas en múltiples máquinas.
-
-### Si hay flakiness en un test, ¿cómo lo manejarías?
-
-1. **Reintentos**: Configurar reintentos automáticos para las pruebas que fallan de manera intermitente.
-2. **Análisis de Flakiness**: Analizar las causas del flakiness y aplicar soluciones específicas, como mejorar la sincronización o aumentar los tiempos de espera.
-3. **Monitoreo y Reporte**: Implementar monitoreo y reporte de flakiness para identificar patrones y áreas problemáticas.
 
 ## Decisiones Técnicas
 
@@ -130,19 +115,33 @@ test('Happy path API test', async ({ request }) => {
   fs.writeFileSync('api-happy-path-response.json', JSON.stringify(responseData, null, 2));
 });
 ```
+## Preguntas Extra
+
+### Imagina que ya estamos trabajando juntos y que la suite de pruebas creciera a 500 tests, ¿qué cambios harías o sugerirías en la estructura?
+
+No soy partidario de llegar a ese contexto de tener tantas pruebas automatizadas, (no sin antes haber tomado todas las medidas preventivas para evitarlo), puesto que pienso que la automatización es una ventaja que nos ayuda a reducir costos, tiempos y probabilidad de errores humanos, no hay que abusar de ella y tener un criterio bien definido de que tiene sentido y prioridad ser destinado a una automatización. Pero si ya ingreso a un proyecto con esa realidad, lo primero que haría es lo siguiente:
+1. **Estrategias de Ejecución**: Implementar una estrategia de ejecución de pruebas basada en prioridades, ejecutando primero las pruebas críticas y luego las menos críticas.
+2.  **Paralelización de Pruebas**: Aumentar el número de workers para ejecutar las pruebas en paralelo y reducir el tiempo total de ejecución.
+3. **Optimización de Recursos**: Utilizar servicios de CI/CD que permitan la ejecución distribuida de pruebas en múltiples máquinas.
+
+### Si hay flakiness en un test, ¿cómo lo manejarías?
+
+1. **Reintentos**: Configurar reintentos automáticos para las pruebas que fallan de manera intermitente.
+2. **Análisis de Flakiness**: Analizar las causas del flakiness y aplicar soluciones específicas, como mejorar la sincronización o aumentar los tiempos de espera.
+3. **Monitoreo y Reporte**: Implementar monitoreo y reporte de flakiness para identificar patrones y áreas problemáticas.
+
 
 ## Conclusión
 
 Este proyecto demuestra cómo configurar y ejecutar pruebas de UI y API utilizando Playwright, así como la integración con GitHub Actions para la ejecución continua de pruebas. Las decisiones técnicas tomadas aseguran una configuración robusta y eficiente, y las estrategias propuestas para manejar el crecimiento de la suite de pruebas y el flakiness garantizan la mantenibilidad y la confiabilidad a largo plazo.
-```
 
-Este README proporciona instrucciones claras sobre cómo ejecutar las pruebas, detalles sobre la implementación, respuestas a las preguntas adicionales, y una explicación de las decisiones técnicas tomadas. Además, incluye un ejemplo de cómo escribir los datos de las pruebas de API en un archivo `.json`.
 
 Cualquier inquietud o consulta no dude en contactarme.
-
+```bash
 
 Germán Kohn
 germankohn@gmail.com
 11-6956-8210
 https://www.linkedin.com/in/germankohn/
 Sr QA Automation
+```
