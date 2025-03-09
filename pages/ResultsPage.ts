@@ -5,7 +5,7 @@ export class ResultsPage {
 
   constructor(page: Page) {
     this.page = page;
-}
+  }
 
   obtenerTituloViajeDeIda(tituloViajeDeIda: string): Locator {
     return this.page.locator(`div.title:has-text("${tituloViajeDeIda}")`);
@@ -31,8 +31,8 @@ export class ResultsPage {
     return this.page.locator(`li.parsley-required:has-text("${advertenciaDestino}")`);
   }
 
-    advertenciaFechaDeIdaIncompleta(advertenciaFechaDeIda:string): Locator {
-        return this.page.locator(`li.parsley-required:has-text("${advertenciaFechaDeIda}")`);
-    }
+  advertenciaFechaDeIdaIncompleta(advertenciaFechaDeIda:string): Locator {
+    return this.page.locator(`li.parsley-required:has-text("${advertenciaFechaDeIda}")`);
+  }
 
 }

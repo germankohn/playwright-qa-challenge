@@ -141,7 +141,6 @@ Cualquier inquietud o consulta no dude en contactarme.
 
 Germán Kohn
 germankohn@gmail.com
-11-6956-8210
 https://www.linkedin.com/in/germankohn/
 Sr QA Automation
 ```
