@@ -3,3 +3,9 @@ node_modules/
 
 # Ignorar archivos de entorno
 .env
+
+# No ignorar los directorios de artefactos generados por Playwright
+!playwright-report/
+!playwright-report/screenshots/
+!playwright-report/traces/
+!playwright-report/videos/
