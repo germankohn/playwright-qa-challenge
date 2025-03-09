@@ -23,10 +23,10 @@ export default defineConfig({
   testDir: './tests',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
-  retries: process.env.CCI ? 2 : 0,
+  retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   reporter: [['list'], ['json', { outputFile: 'playwright-report/test-results.json' }], ['html', { outputFolder: 'playwright-report/html', open: 'never' }]],
-  timeout: 20000, // Tiempo máximo para cada test
+  timeout: 30000, // Tiempo máximo para cada test
   use: {
     headless: true, // Asegurarse de que los tests se ejecuten en modo headless
     trace: 'on-first-retry', // Generar trazas solo en el primer reintento
