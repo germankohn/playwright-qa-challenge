@@ -3,11 +3,3 @@ node_modules/
 
 # Ignorar archivos de entorno
 .env
-
-# Ignorar directorios de artefactos
-playwright-report/
-test-results.json
-test-results/
-screenshots/
-/blob-report/
-/playwright/.cache/
