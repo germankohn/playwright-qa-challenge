@@ -34,7 +34,7 @@ test('Busqueda rapida de pasajes de micro', async () => {
     await page.waitForLoadState('networkidle');
 
     // Capturar pantalla antes de la verificación
-    await page.screenshot({ path: 'screenshots/before-check.png' });
+    await page.screenshot({ path: 'playwright-report/screenshots/before-check.png' });
 
     // Verificar que el título del viaje de ida sea visible
     await expect(page.locator('div.title:has-text("Seleccioná tu viaje de IDA")')).toBeVisible({ timeout: 60000 });
@@ -46,7 +46,7 @@ test('Busqueda rapida de pasajes de micro', async () => {
     await expect(resultsPage.obtenerTituloDestino("Tandil Terminal")).toBeVisible({ timeout: 60000 });
 
     // Capturar pantalla después de la verificación
-    await page.screenshot({ path: 'screenshots/after-check.png' });
+    await page.screenshot({ path: 'playwright-report/screenshots/after-check.png' });
   });
 });
 
